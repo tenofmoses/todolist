@@ -1,0 +1,12 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+
+<ul>
+    {% for todo in todos %}
+        <li><a href="/details/{{ todo.id }}">{{ todo.title }}:</a>{{ todo.text }}</li>
+    {% endfor %}
+</ul>
+
+<a href="/add">Add todo</a>
+
+{% endblock content %}
